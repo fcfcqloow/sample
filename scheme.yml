@@ -1,0 +1,35 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Swagger Petstore
+  
+servers:
+  - url: https://{environment}{domain}/v2
+    variables:
+      environment:
+        default: api
+        enum:
+          - api
+          - set
+          - get
+      domain:
+        default: .prod
+        enum:
+          - .prod
+          - .prod.dev
+          - .prod.staging
+        x-enum-values:
+         - f
+         - s
+         - title
+paths:
+  '/pets':
+    get:
+      operationId: listPets
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:    
+              schema:
+                $ref: "./components.yml/#/components/schemas/Pets"
