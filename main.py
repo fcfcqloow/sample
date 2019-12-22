@@ -7,7 +7,7 @@ import numpy as np
 
 from Encoder import *
 from Decoder import *
-from train import *
+from Seq2Seq import *
 from Seq2SeqModelLoader import *
 
 num_samples = 20000 
