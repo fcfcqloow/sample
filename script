@@ -1,1 +1,0 @@
-npx openapi-generator generate  -i scheme.yml -g typescript-node -o example-ts-node -c .\openapi.config.json
