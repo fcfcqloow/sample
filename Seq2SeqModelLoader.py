@@ -4,11 +4,11 @@ from keras.models import Model, load_model
 class Seq2SeqModelLoader:
     def __init__(self, path, latent_dim=256):
         self.model = load_model(path)
-        encoder_inputs = model.input[0]
-        decoder_inputs = model.input[1]
-        encoder_outputs, state_h_enc, state_c_enc = model.layers[2].output
-        decoder_lstm = model.layers[3]
-        decoder_dense = model.layers[4]
+        encoder_inputs = self.model.input[0]
+        decoder_inputs = self.model.input[1]
+        encoder_outputs, state_h_enc, state_c_enc = self.model.layers[2].output
+        decoder_lstm = self.model.layers[3]
+        decoder_dense = self.model.layers[4]
         encoder_states = [state_h_enc, state_c_enc]
         
 
