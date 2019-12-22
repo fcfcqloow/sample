@@ -62,10 +62,13 @@ def train(path, epochs=10, batch=32):
         encoder_input_data,
         decoder_input_data,
         decoder_target_data,
-        epochs, # epochs
-        batch  # batch size
+        epochs,
+        batch
     )
     seq2seq.saveModel(path=path)
 
+def addTrain(path, epochs=10, batch=32):
+
+    
 if __name__ == "__main__":
     main()

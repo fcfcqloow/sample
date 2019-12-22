@@ -1,4 +1,4 @@
-from keras.models import Model
+from keras.models import Model, load_model
 class Seq2Seq:
     def __init__(self, encoder, decoder):
         self.encoder = encoder
@@ -9,6 +9,9 @@ class Seq2Seq:
             ],
             decoder.outputs
         )
+    
+    def editModel(path):
+        self.model = load_model(path)
     
     def trainModel(
         self,
